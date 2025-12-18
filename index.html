@@ -175,30 +175,103 @@
         </div>
     </section>
 
-    <section id="projects" class="content-section">
+ <section id="projects" class="content-section">
         <div class="container">
-            <h2 class="section-heading fade-in">Featured Projects</h2>
+            <h2 class="section-heading fade-in">Technical Projects</h2>
+
+            <h3 class="project-cat-header fade-in">Systems & Algorithmic Engineering</h3>
             <div class="projects-grid">
-
-                <a href="https://github.com/codev-aryan/RetroStream2000" target="_blank" class="project-card glass-card fade-in">
-                    <h3>RetroStream 2000</h3>
-                    <p class="project-tech">Tech: Python, Tkinter, Spotify API</p>
-                    <p class="project-desc">Y2K-themed music transfer app with AI-powered track matching and retro aesthetics.</p>
-                    <span class="project-link">View on GitHub</span>
-                </a>
-
-                <a href="https://github.com/codev-aryan/stark" target="_blank" class="project-card glass-card fade-in">
-                    <h3>STARK</h3>
-                    <p class="project-tech">Tech: HTML, CSS, JavaScript</p>
-                    <p class="project-desc">Student productivity tool with task management, study timer, and note-taking.</p>
-                    <span class="project-link">View on GitHub</span>
+                
+                <a href="https://github.com/codev-aryan/TextEngine" target="_blank" class="project-card glass-card fade-in">
+                    <h3>TextEngine</h3>
+                    <p class="project-tech">C++14 • Trie • DP</p>
+                    <ul class="project-bullets">
+                        <li>Engineered a Trie-based prefix tree achieving <strong>O(m)</strong> search complexity.</li>
+                        <li>Optimized Edit Distance using Rolling Arrays to reduce space to <strong>O(min(m,n))</strong>.</li>
+                        <li>Achieved <strong>&lt;50μs</strong> query latency with custom memory management.</li>
+                    </ul>
                 </a>
 
                 <a href="https://github.com/codev-aryan/algo-benchmark" target="_blank" class="project-card glass-card fade-in">
                     <h3>AlgorithmBench</h3>
-                    <p class="project-tech">Tech: C++</p>
-                    <p class="project-desc">Performance analysis tool for sorting and searching algorithms with CSV export.</p>
-                    <span class="project-link">View on GitHub</span>
+                    <p class="project-tech">C++11 • STL • Chrono</p>
+                    <ul class="project-bullets">
+                        <li>Designed a framework to benchmark 7 sorting algorithms (IntroSort, QuickSort).</li>
+                        <li>Implemented adaptive input sizing to scale tests based on Big-O complexity.</li>
+                        <li>Ensured nanosecond-precision using warm-up cycles to mitigate cache misses.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/TermiChat" target="_blank" class="project-card glass-card fade-in">
+                    <h3>TermiChat</h3>
+                    <p class="project-tech">Bash • Ncat • Networking</p>
+                    <ul class="project-bullets">
+                        <li>Architected a Zero-Dependency chat tool using Ncat in Broker Mode.</li>
+                        <li>Enabled low-latency message relay on local networks without external libraries.</li>
+                    </ul>
+                </a>
+            </div>
+
+            <h3 class="project-cat-header fade-in" style="margin-top: 60px;">Application Architecture</h3>
+            <div class="projects-grid">
+                
+                <a href="https://github.com/codev-aryan/DineFlow" target="_blank" class="project-card glass-card fade-in">
+                    <h3>DineFlow</h3>
+                    <p class="project-tech">Java • MVC • Serialization</p>
+                    <ul class="project-bullets">
+                        <li>Architected a backend strictly adhering to <strong>MVC</strong> to decouple logic.</li>
+                        <li>Implemented <strong>Singleton</strong> & <strong>Factory</strong> patterns for object management.</li>
+                        <li>Built a custom persistence layer using Java Serialization to maintain state.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/Voting-management-system" target="_blank" class="project-card glass-card fade-in">
+                    <h3>Voting System</h3>
+                    <p class="project-tech">C++ • File I/O • Security</p>
+                    <ul class="project-bullets">
+                        <li>Developed a secure role-based system preventing double-voting via ID hashing.</li>
+                        <li>Managed data persistence through raw file I/O (No-SQL approach).</li>
+                    </ul>
+                </a>
+            </div>
+
+            <h3 class="project-cat-header fade-in" style="margin-top: 60px;">AI, Cloud & Utilities</h3>
+            <div class="projects-grid">
+
+                <a href="https://github.com/codev-aryan/RetroStream2000" target="_blank" class="project-card glass-card fade-in">
+                    <h3>RetroStream 2000</h3>
+                    <p class="project-tech">Python • Spotify API • Threading</p>
+                    <ul class="project-bullets">
+                        <li>Engineered threaded architecture to execute blocking API calls asynchronously.</li>
+                        <li>Implemented <strong>Fuzzy Matching</strong> to map local files to Spotify metadata.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/rytex" target="_blank" class="project-card glass-card fade-in">
+                    <h3>Rytex AI</h3>
+                    <p class="project-tech">Python • Gemini Flash • Firebase</p>
+                    <ul class="project-bullets">
+                        <li>Integrated Google Gemini 1.5 for NLP and code generation.</li>
+                        <li>Connected <strong>Firebase Firestore</strong> to persist context across sessions.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/PySql" target="_blank" class="project-card glass-card fade-in">
+                    <h3>PySql Client</h3>
+                    <p class="project-tech">Python • Tkinter • MySQL</p>
+                    <ul class="project-bullets">
+                        <li>Developed a GUI SQL client with custom editor and template injection.</li>
+                        <li>Programmed a dynamic rendering engine adapting tables to query results.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/stark" target="_blank" class="project-card glass-card fade-in">
+                    <h3>STARK</h3>
+                    <p class="project-tech">JavaScript • LocalStorage</p>
+                    <ul class="project-bullets">
+                        <li>Built a task suite using LocalStorage for client-side only persistence.</li>
+                        <li>Eliminated backend latency by managing state entirely in the browser.</li>
+                    </ul>
                 </a>
 
             </div>

@@ -691,3 +691,60 @@ body {
         text-align: center;
     }
 }
+
+/* --- New Styles for Updated Project Section --- */
+
+.project-cat-header {
+    color: var(--accent-cyan);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 4px solid var(--accent-pink);
+    text-align: left; /* Aligns header to left */
+}
+
+/* Update Card Layout for Bullet Points */
+.project-card {
+    align-items: flex-start; /* Align text to left, not center */
+    text-align: left;
+    height: 100%; /* Ensure uniform height in grid */
+}
+
+.project-bullets {
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+    width: 100%;
+}
+
+.project-bullets li {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+    line-height: 1.5;
+}
+
+.project-bullets li::before {
+    content: '▹'; /* Stylized bullet */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-pink);
+    font-weight: bold;
+}
+
+/* Emphasize keywords inside bullets */
+.project-bullets li strong {
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+/* Adjust grid for tablets */
+@media (max-width: 1024px) {
+    .project-card {
+        padding: 20px;
+    }
+}
