@@ -127,7 +127,7 @@ Add or remove sections by editing the HTML structure and updating navigation lin
 
 ## 📄 License
 
-This project is open source and available under the [MIT License].
+This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
