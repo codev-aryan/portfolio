@@ -175,11 +175,45 @@
         </div>
     </section>
 
- <section id="projects" class="content-section">
+<section id="projects" class="content-section">
         <div class="container">
             <h2 class="section-heading fade-in">Technical Projects</h2>
 
-            <h3 class="project-cat-header fade-in">Systems & Algorithmic Engineering</h3>
+            <h3 class="project-cat-header fade-in">Heavy Systems & Architecture</h3>
+            <div class="projects-grid">
+                
+                <a href="https://github.com/codev-aryan/redis-server-implementation" target="_blank" class="project-card glass-card fade-in">
+                    <h3>Redis Server Engine</h3>
+                    <p class="project-tech">C++17 • POSIX Sockets • Multithreading</p>
+                    <ul class="project-bullets">
+                        <li>Engineered a multi-threaded server implementing the <strong>RESP protocol</strong> from scratch.</li>
+                        <li>Built a thread-per-client concurrency model utilizing <strong>fine-grained locking</strong>.</li>
+                        <li>Implemented robust asynchronous Master-Replica distributed synchronization.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/sqlite-implementation" target="_blank" class="project-card glass-card fade-in">
+                    <h3>SQLite Database Engine</h3>
+                    <p class="project-tech">C++23 • B-Trees • Binary Parsing</p>
+                    <ul class="project-bullets">
+                        <li>Built a from-scratch SQLite-compatible database engine without external libraries.</li>
+                        <li>Reverse-engineered the SQLite binary file format for recursive <strong>B-Tree traversal</strong>.</li>
+                        <li>Implemented query optimization (Index Scans vs Full Scans), reducing lookup latency to milliseconds.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/git-implementation" target="_blank" class="project-card glass-card fade-in">
+                    <h3>Git Implementation</h3>
+                    <p class="project-tech">C++23 • SHA-1 • Zlib Compression</p>
+                    <ul class="project-bullets">
+                        <li>Engineered a fully functional version control system implementing manual binary packfile parsing.</li>
+                        <li>Developed a content-addressable storage system utilizing SHA-1 hashing.</li>
+                        <li>Built core plumbing commands and delta-compression resolution algorithms.</li>
+                    </ul>
+                </a>
+            </div>
+
+            <h3 class="project-cat-header fade-in" style="margin-top: 60px;">Algorithmic & Low-Level Engineering</h3>
             <div class="projects-grid">
                 
                 <a href="https://github.com/codev-aryan/TextEngine" target="_blank" class="project-card glass-card fade-in">
@@ -196,12 +230,12 @@
                     <h3>AlgorithmBench</h3>
                     <p class="project-tech">C++11 • STL • Chrono</p>
                     <ul class="project-bullets">
-                        <li>Designed a framework to benchmark 7 sorting algorithms (IntroSort, QuickSort).</li>
+                        <li>Designed a framework to benchmark 7 sorting/searching algorithms.</li>
                         <li>Implemented adaptive input sizing to scale tests based on Big-O complexity.</li>
                         <li>Ensured nanosecond-precision using warm-up cycles to mitigate cache misses.</li>
                     </ul>
                 </a>
-
+                                
                 <a href="https://github.com/codev-aryan/TermiChat" target="_blank" class="project-card glass-card fade-in">
                     <h3>TermiChat</h3>
                     <p class="project-tech">Bash • Ncat • Networking</p>
@@ -210,11 +244,62 @@
                         <li>Enabled low-latency message relay on local networks without external libraries.</li>
                     </ul>
                 </a>
+
+                <a href="https://github.com/codev-aryan/Voting-management-system" target="_blank" class="project-card glass-card fade-in">
+                    <h3>Voting System</h3>
+                    <p class="project-tech">C++ • File I/O • Security</p>
+                    <ul class="project-bullets">
+                        <li>Developed a secure role-based system preventing double-voting via ID checks.</li>
+                        <li>Managed scalable data persistence through raw text file I/O operations.</li>
+                        <li>Engineered algorithmic tie detection and result sorting mechanisms.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/Management-system" target="_blank" class="project-card glass-card fade-in">
+                    <h3>C Management Systems</h3>
+                    <p class="project-tech">C • Dynamic Memory</p>
+                    <ul class="project-bullets">
+                        <li>Programmed administrative tools for tracking extensive hospital/school data.</li>
+                        <li>Utilized <strong>dynamic memory allocation</strong> for highly efficient record processing.</li>
+                        <li>Engineered dynamic CLI tables with auto-sizing constraints.</li>
+                    </ul>
+                </a>
+
             </div>
 
-            <h3 class="project-cat-header fade-in" style="margin-top: 60px;">Application Architecture</h3>
+            <h3 class="project-cat-header fade-in" style="margin-top: 60px;">Application Architecture & Frontend</h3>
             <div class="projects-grid">
-                
+
+                <a href="https://github.com/codev-aryan/AuroraDash" target="_blank" class="project-card glass-card fade-in">
+                    <h3>AuroraDash</h3>
+                    <p class="project-tech">React • TypeScript • Canvas</p>
+                    <ul class="project-bullets">
+                        <li>Engineered a high-fidelity endless runner achieving a smooth <strong>60fps</strong> render rate.</li>
+                        <li>Integrated <strong>Web Audio API</strong> for dynamic, procedural soundscapes.</li>
+                        <li>Built a strictly-typed, modular frontend utilizing modern React 18 architecture.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/PySql" target="_blank" class="project-card glass-card fade-in">
+                    <h3>PySql Client</h3>
+                    <p class="project-tech">Python • Tkinter • MySQL</p>
+                    <ul class="project-bullets">
+                        <li>Developed a GUI SQL client with a custom editor and query execution shortcuts.</li>
+                        <li>Programmed a dynamic rendering engine adapting tables to query results in real-time.</li>
+                        <li>Built data extraction features allowing one-click CSV exporting.</li>
+                    </ul>
+                </a>
+
+                <a href="https://github.com/codev-aryan/stark" target="_blank" class="project-card glass-card fade-in">
+                    <h3>STARK</h3>
+                    <p class="project-tech">JavaScript • LocalStorage</p>
+                    <ul class="project-bullets">
+                        <li>Built a comprehensive student productivity suite with adaptive UI themes.</li>
+                        <li>Engineered persistent state management purely via LocalStorage.</li>
+                        <li>Eliminated backend latency by managing DOM updates entirely in the browser.</li>
+                    </ul>
+                </a>
+                                
                 <a href="https://github.com/codev-aryan/DineFlow" target="_blank" class="project-card glass-card fade-in">
                     <h3>DineFlow</h3>
                     <p class="project-tech">Java • MVC • Serialization</p>
@@ -225,25 +310,37 @@
                     </ul>
                 </a>
 
-                <a href="https://github.com/codev-aryan/Voting-management-system" target="_blank" class="project-card glass-card fade-in">
-                    <h3>Voting System</h3>
-                    <p class="project-tech">C++ • File I/O • Security</p>
+                <a href="https://github.com/codev-aryan/python-projects" target="_blank" class="project-card glass-card fade-in">
+                    <h3>Classic Games Suite</h3>
+                    <p class="project-tech">Python • Pygame • Tkinter</p>
                     <ul class="project-bullets">
-                        <li>Developed a secure role-based system preventing double-voting via ID hashing.</li>
-                        <li>Managed data persistence through raw file I/O (No-SQL approach).</li>
+                        <li>Programmed an unbeatable Tic-Tac-Toe using <strong>Minimax-style</strong> AI logic.</li>
+                        <li>Built full mechanics for Snake and Pac-Man including collision physics.</li>
+                        <li>Engineered dynamic game loops managing FPS limits and grid-based pathfinding.</li>
                     </ul>
                 </a>
             </div>
 
-            <h3 class="project-cat-header fade-in" style="margin-top: 60px;">AI, Cloud & Utilities</h3>
+            <h3 class="project-cat-header fade-in" style="margin-top: 60px;">AI Integrations & API Utilities</h3>
             <div class="projects-grid">
 
+                <a href="https://github.com/codev-aryan/OpenSpec" target="_blank" class="project-card glass-card fade-in">
+                    <h3>OpenSpec AI</h3>
+                    <p class="project-tech">Node.js • Llama 3 • axe-core</p>
+                    <ul class="project-bullets">
+                        <li>Developed an open-source CLI tool for <strong>self-healing</strong> WCAG accessibility.</li>
+                        <li>Integrated <strong>Llama 3 (8B)</strong> via Groq API for precise, autonomous DOM fixes.</li>
+                        <li>Engineered concurrent string replacement pipelines to prevent structural breaking.</li>
+                    </ul>
+                </a>
+
                 <a href="https://github.com/codev-aryan/RetroStream2000" target="_blank" class="project-card glass-card fade-in">
-                    <h3>RetroStream 2000</h3>
+                    <h3>RetroStream 2000 / Local2Stream</h3>
                     <p class="project-tech">Python • Spotify API • Threading</p>
                     <ul class="project-bullets">
                         <li>Engineered threaded architecture to execute blocking API calls asynchronously.</li>
-                        <li>Implemented <strong>Fuzzy Matching</strong> to map local files to Spotify metadata.</li>
+                        <li>Implemented advanced <strong>Fuzzy Matching</strong> to map local files to Spotify metadata.</li>
+                        <li>Built a responsive Y2K-themed terminal GUI tracking real-time API limits.</li>
                     </ul>
                 </a>
 
@@ -251,26 +348,9 @@
                     <h3>Rytex AI</h3>
                     <p class="project-tech">Python • Gemini Flash • Firebase</p>
                     <ul class="project-bullets">
-                        <li>Integrated Google Gemini 1.5 for NLP and code generation.</li>
-                        <li>Connected <strong>Firebase Firestore</strong> to persist context across sessions.</li>
-                    </ul>
-                </a>
-
-                <a href="https://github.com/codev-aryan/PySql" target="_blank" class="project-card glass-card fade-in">
-                    <h3>PySql Client</h3>
-                    <p class="project-tech">Python • Tkinter • MySQL</p>
-                    <ul class="project-bullets">
-                        <li>Developed a GUI SQL client with custom editor and template injection.</li>
-                        <li>Programmed a dynamic rendering engine adapting tables to query results.</li>
-                    </ul>
-                </a>
-
-                <a href="https://github.com/codev-aryan/stark" target="_blank" class="project-card glass-card fade-in">
-                    <h3>STARK</h3>
-                    <p class="project-tech">JavaScript • LocalStorage</p>
-                    <ul class="project-bullets">
-                        <li>Built a task suite using LocalStorage for client-side only persistence.</li>
-                        <li>Eliminated backend latency by managing state entirely in the browser.</li>
+                        <li>Integrated Google Gemini 1.5 API for rapid NLP and code generation tasks.</li>
+                        <li>Connected <strong>Firebase Firestore</strong> to securely persist session-based context.</li>
+                        <li>Designed a stateful chat interface utilizing the Streamlit framework.</li>
                     </ul>
                 </a>
 
