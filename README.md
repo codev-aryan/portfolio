@@ -1,156 +1,139 @@
-# 🚀 Personal Portfolio Website
+<div align="center">
 
-A modern, responsive portfolio website showcasing my competitive programming journey, projects, and technical skills with stunning glassmorphism design and smooth animations.
+# 🚀 codev-aryan — Portfolio
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+<p>
+  <img src="https://img.shields.io/badge/Status-Live-22c55e?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/License-MIT-a855f7?style=for-the-badge"/>
+</p>
 
-## ✨ Features
+<p>
+  A fast, zero-dependency portfolio with glassmorphism UI, scroll animations, and live competitive programming ratings fetched directly from CodeChef and Codeforces at page load.
+</p>
 
-- **🎨 Modern UI/UX Design**
-  - Glassmorphism effects with backdrop blur
-  - Smooth gradient animations
-  - Responsive design for all devices
-  - Dark theme with vibrant accent colors
+**[View Live →](https://codev-aryan.github.io/portfolio)**
 
-- **⚡ Interactive Elements**
-  - Typing animation on hero section
-  - Scroll-triggered fade-in animations
-  - Number count-up animations for stats
-  - Smooth scroll navigation with active section highlighting
-  - Hover effects on cards and buttons
+</div>
 
-- **📱 Fully Responsive**
-  - Mobile-friendly hamburger menu
-  - Optimized layouts for desktop, tablet, and mobile
-  - Touch-friendly interactive elements
+---
 
-- **🎯 Key Sections**
-  - Hero section with dynamic typing effect
-  - About section with statistics
-  - Coding profiles showcase (CodeChef, Codeforces, LeetCode, HackerRank)
-  - Achievements and competitions
-  - Featured projects with GitHub links
-  - Tech stack and skills
-  - Contact section with social links
+## Features
 
-## 🛠️ Technologies Used
+### UI & Design
+- **Glassmorphism** — frosted-glass cards with `backdrop-filter: blur`, translucent borders, and layered depth
+- **Animated gradient background** — slow-cycling `400% 400%` mesh that shifts between three purple-navy tones
+- **Scroll-triggered fade-ins** — every section element enters via `IntersectionObserver` as it scrolls into view
+- **Count-up animations** — rating numbers animate from 0 to their live value when the profiles section becomes visible
+- **Typing effect** — hero subtitle types character by character with a blinking cursor
+- **Active nav highlighting** — navigation link updates automatically as you scroll through sections
+- **Hover micro-interactions** — cards lift, buttons invert, skill pills change color, social icons bounce
 
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Fonts:** Google Fonts (Poppins)
-- **Icons:** Font Awesome 6.5.2
-- **Design Techniques:** Glassmorphism, CSS Grid, Flexbox, CSS Animations
+### Live Data
+- **CodeChef rating & stars** — fetched on load via `codechef-api.vercel.app`; automatically retries through a CORS proxy (`allorigins.win`) if the direct request is blocked; star tier calculated client-side with if/else rating bands
+- **Codeforces rating & rank title** — fetched from the official Codeforces public API; rank label (Newbie → Legendary Grandmaster) rendered in its exact official color
+- **Hardcoded fallbacks** — both cards show correct static values instantly; live data replaces them silently on success, so the page never looks broken
 
-## 📂 Project Structure
+### Responsive
+- Hamburger menu on mobile with slide-in nav panel
+- Single-column stacked layout below 768px
+- Fluid typography with `clamp()` — no layout breaks at any viewport width
+
+---
+
+## Structure
 
 ```
 portfolio/
-│
-├── index.html          # Main HTML file
-├── styles.css          # Complete styling with responsive design
-├── script.js           # JavaScript for interactivity
-└── README.md           # Project documentation
+├── index.html      ← all content and markup
+├── styles.css      ← design system, glassmorphism, animations, responsive
+├── script.js       ← interactions, live API fetching, count-up, observers
+└── README.md
 ```
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
+## Getting Started
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No build tools or dependencies required!
-
-### Installation
-
-1. Clone the repository:
 ```bash
 git clone https://github.com/codev-aryan/portfolio.git
-```
-
-2. Navigate to the project directory:
-```bash
 cd portfolio
 ```
 
-3. Open `index.html` in your browser:
+Open `index.html` directly in any browser — no build step, no dependencies, no server needed.
+
 ```bash
-# On macOS
-open index.html
-
-# On Linux
-xdg-open index.html
-
-# On Windows
-start index.html
+# quick one-liner
+open index.html          # macOS
+xdg-open index.html      # Linux
+start index.html         # Windows
 ```
 
-Or simply double-click the `index.html` file.
+---
 
-## 🎨 Customization
+## Customisation
 
-### Colors
-Edit the CSS variables in `styles.css`:
+**Colors** — edit the four root variables in `styles.css`, everything updates:
 ```css
 :root {
-    --bg-grad-1: #0a0e27;
-    --bg-grad-2: #1a1a3e;
-    --bg-grad-3: #2d1b4e;
+    --bg-grad-1:   #0a0e27;
+    --bg-grad-2:   #1a1a3e;
+    --bg-grad-3:   #2d1b4e;
     --accent-cyan: #00d4ff;
     --accent-pink: #ff006e;
 }
 ```
 
-### Content
-- Update personal information in `index.html`
-- Modify typing text in `script.js`:
-```javascript
-const textToType = "Your Custom Text Here";
+**Typing text** — one line in `script.js`:
+```js
+const textToType = "Your text here";
 ```
 
-### Sections
-Add or remove sections by editing the HTML structure and updating navigation links accordingly.
-
-## 📱 Responsive Breakpoints
-
-- Desktop: 1024px and above
-- Tablet: 768px - 1023px
-- Mobile: Below 768px
-
-## 🌐 Browser Support
-
-- ✅ Chrome (recommended)
-- ✅ Firefox
-- ✅ Safari
-- ✅ Edge
-- ✅ Opera
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
-
-**Aryan Mehta**
-- GitHub: [@codev-aryan](https://github.com/codev-aryan)
-- LinkedIn: [@codev-aryan](https://linkedin.com/in/codev-aryan)
-- Email: aryanmehtayt2@gmail.com
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/codev-aryan/portfolio/issues).
-
-## ⭐ Show Your Support
-
-Give a ⭐️ if you like this project!
-
-## 📝 Notes
-
-- All animations are CSS-based for optimal performance
-- No external libraries required except Font Awesome for icons
-- Optimized for fast loading and smooth scrolling
-- SEO-friendly structure with semantic HTML
+**Ratings** — update the `FALLBACK` object in `script.js` and the `data-target` attributes in `index.html` to match your handles:
+```js
+const FALLBACK = {
+    codechef:   { rating: 1615, stars: 3 },
+    codeforces: { rating: 1243, rank: 'Pupil', color: '#008000' },
+};
+```
 
 ---
 
-**Made with 💙 by Aryan Mehta **
+## Responsive Breakpoints
+
+| Breakpoint | Layout |
+|:---|:---|
+| ≥ 1024px | 3-column project grids, full nav |
+| 768px – 1023px | 2-column grids |
+| < 768px | Single column, hamburger menu |
+
+---
+
+## Roadmap
+
+- [ ] **GitHub API integration** — auto-fetch pinned repos and inject project cards without touching HTML
+- [ ] **LeetCode live stats** — problem count and contest rating via LeetCode public GraphQL API  
+- [ ] **Codeforces contest history chart** — mini rating graph rendered on a `<canvas>` inside the profile card
+- [ ] **Dark / light mode toggle** — swap CSS variable set with a single class on `<body>`
+- [ ] **Project filter tabs** — click a category (Systems · ML · Frontend) to filter the projects grid
+- [ ] **CI/CD auto-deploy** — GitHub Actions workflow to deploy to GitHub Pages on every push to `main`
+
+---
+
+## Browser Support
+
+Chrome · Firefox · Safari · Edge · Opera — all modern browsers with `backdrop-filter` support.
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+---
+
+<div align="center">
+  <sub>Built by <a href="https://github.com/codev-aryan">codev-aryan</a></sub>
+</div>
