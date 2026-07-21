@@ -301,13 +301,11 @@ body {
     margin: 0 auto 60px auto;
 }
 
-/* ▼▼▼ THIS IS THE UPDATED RULE ▼▼▼
-*/
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Changed from 3 */
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--grid-gap);
-    max-width: 800px; /* Added to center the 2 cards */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -325,10 +323,14 @@ body {
     color: var(--text-gray);
 }
 
+/* Profile cards: constrained width + content-based height so a 2-col grid
+   of 4 cards doesn't stretch into oversized tiles on wide screens */
 .profiles-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: var(--grid-gap);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .profile-card {
@@ -339,8 +341,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 10px;
-    padding: var(--card-padding);
+    gap: 8px;
+    padding: 28px 24px;
 }
 .profile-card:nth-child(odd):hover {
     box-shadow: 0 15px 50px rgba(0, 212, 255, 0.4);
@@ -350,19 +352,19 @@ body {
 }
 
 .profile-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-white);
 }
 
 .profile-rating-stars {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     color: #FFD700;
     line-height: 1.2;
 }
 
 .profile-rating-number-container {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-white);
     line-height: 1.2;
@@ -372,14 +374,14 @@ body {
     color: #FFD700;
 }
 .profile-rating-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text-gray);
-    margin-top: -10px;
 }
 
 .profile-link {
-    margin-top: 15px;
+    margin-top: 8px;
     font-weight: 600;
+    font-size: 0.9rem;
     color: var(--accent-cyan);
     transition: letter-spacing 0.3s ease;
 }
@@ -388,22 +390,27 @@ body {
     text-decoration: underline;
 }
 
+/* Achievement cards: same idea — let them size to content, cap the grid
+   width so cards read as cards, not near-full-width panels */
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--grid-gap);
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
 }
 
 .achievement-card {
     padding: var(--card-padding);
 }
 .achievement-card h3 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     color: var(--text-white);
     margin-bottom: 10px;
 }
 .achievement-card p {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .projects-grid {
@@ -550,11 +557,14 @@ body {
     }
 
     .stats-grid,
-    .profiles-grid,
     .achievements-grid,
     .projects-grid,
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .stats-grid {
@@ -610,7 +620,13 @@ body {
     }
 }
 
-/* --- Updates for Education Block --- */
+@media (max-width: 480px) {
+    .profiles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Education / Experience blocks --- */
 .education-block {
     display: flex;
     align-items: center;
@@ -630,6 +646,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .edu-details h3 {
@@ -651,7 +668,48 @@ body {
     font-style: italic;
 }
 
-/* --- Updates for Achievement Cards --- */
+/* The very first education-block in a section carries the top margin from
+   .about-intro; block 2+ don't need the large default margin doubling up
+   with their own inline spacing (fixes uneven vertical rhythm between
+   About and Experience sections) */
+.education-block:first-of-type {
+    margin-top: 0;
+}
+
+/* Technical Lead card: a role change within the same club, not a second
+   full "institution" entry — trim it down so it doesn't read as an
+   equally-weighted, half-empty duplicate of the degree card above it */
+.leadership-block {
+    max-width: 800px;
+    padding: 20px var(--card-padding);
+}
+.leadership-block .edu-icon {
+    font-size: 2.25rem;
+    width: 60px;
+    height: 60px;
+}
+.leadership-block .edu-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+}
+.leadership-block .edu-inst {
+    font-size: 0.95rem;
+}
+
+/* Experience section: align the intern header card and the bullet list
+   card to the same max-width/margin rhythm as the About section blocks
+   above, so the two sections read as one consistent column instead of
+   drifting to different effective widths */
+#experience .education-block {
+    margin-bottom: 0;
+}
+.experience-details {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Achievement Cards --- */
 .achievement-card {
     position: relative;
     padding-top: 40px; /* Space for date */
@@ -690,9 +748,12 @@ body {
         flex-direction: column;
         text-align: center;
     }
+    .leadership-block .edu-details {
+        text-align: center;
+    }
 }
 
-/* --- New Styles for Updated Project Section --- */
+/* --- Project Section --- */
 
 .project-cat-header {
     color: var(--accent-cyan);
@@ -701,14 +762,13 @@ body {
     margin-bottom: 30px;
     padding-left: 15px;
     border-left: 4px solid var(--accent-pink);
-    text-align: left; /* Aligns header to left */
+    text-align: left;
 }
 
-/* Update Card Layout for Bullet Points */
 .project-card {
-    align-items: flex-start; /* Align text to left, not center */
+    align-items: flex-start;
     text-align: left;
-    height: 100%; /* Ensure uniform height in grid */
+    height: 100%;
 }
 
 .project-bullets {
@@ -728,7 +788,7 @@ body {
 }
 
 .project-bullets li::before {
-    content: '▹'; /* Stylized bullet */
+    content: '▹';
     position: absolute;
     left: 0;
     top: 0;
@@ -736,13 +796,11 @@ body {
     font-weight: bold;
 }
 
-/* Emphasize keywords inside bullets */
 .project-bullets li strong {
     color: var(--text-white);
     font-weight: 600;
 }
 
-/* Adjust grid for tablets */
 @media (max-width: 1024px) {
     .project-card {
         padding: 20px;
