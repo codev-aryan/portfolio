@@ -197,6 +197,22 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Resume is a download action, not a scroll-link — give it a pill so it
+   doesn't blend into the underline-on-hover nav items */
+.nav-link-resume {
+    padding: 6px 16px;
+    border: 1px solid var(--accent-cyan);
+    border-radius: 20px;
+    color: var(--accent-cyan);
+}
+.nav-link-resume::after {
+    display: none;
+}
+.nav-link-resume:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-grad-1);
+}
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -285,6 +301,8 @@ body {
 
 .hero-cta {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 

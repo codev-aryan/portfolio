@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Typing Effect ─────────────────────────────────────────────────────────
     const typingTarget = document.querySelector('.typing-effect');
     if (typingTarget) {
-        const textToType = "Competitive Programmer | 500+ Problems Solved";
+        const textToType = "Backend & Systems Engineer | 500+ Problems Solved";
         let charIndex = 0;
         function type() {
             if (charIndex < textToType.length) {
