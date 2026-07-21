@@ -382,8 +382,7 @@
                     <p class="project-tech">Python &bull; TensorFlow &bull; scikit-learn &bull; yfinance</p>
                     <ul class="project-bullets">
                         <li>Built an end-to-end forecasting pipeline comparing a two-layer <strong>LSTM</strong> against a <strong>Random Forest</strong> baseline on Apple's historical prices (2012&ndash;present).</li>
-                        <li>Engineered a leakage-free data pipeline &mdash; scaler fit strictly on training data &mdash; and a 60-day lookback sequence builder shared by both models.</li>
-                        <li>Applied <strong>Dropout (0.2)</strong> and <strong>EarlyStopping</strong> to the LSTM; modular <strong>OOP architecture</strong> with an Abstract Base Class enforces a consistent interface across all models.</li>
+                        <li>Engineered a leakage-free pipeline with a shared 60-day lookback builder, applying <strong>Dropout (0.2)</strong> and <strong>EarlyStopping</strong> to the LSTM within a modular OOP architecture.</li>
                         <li>Generated a <strong>60-day autoregressive future forecast</strong> on business days only using <code>pd.bdate_range</code>.</li>
                     </ul>
                 </a>
@@ -393,8 +392,7 @@
                     <p class="project-tech">Python &bull; Streamlit &bull; PCA/K-Means &bull; scikit-learn</p>
                     <ul class="project-bullets">
                         <li>Built a fully reproducible <strong>six-stage pipeline</strong> — synthetic data generation, cleaning, EDA, clustering/modeling, dashboard, and testing — regenerating every reported number byte-for-byte from a clean checkout.</li>
-                        <li>Ran a chi-square test and two-sample t-test to isolate <strong>engagement consistency</strong> as the behavioral driver of volunteer retention, reported honestly regardless of significance.</li>
-                        <li>Segmented 28 states into 3 performance tiers via <strong>PCA + K-Means</strong> and fit an exploratory logistic regression to surface retention-risk factors, explicitly framed as proof-of-concept rather than a validated predictive system.</li>
+                        <li>Ran chi-square and t-tests to isolate <strong>engagement consistency</strong> as the key retention driver, then segmented 28 states into 3 tiers via <strong>PCA + K-Means</strong> as an exploratory proof-of-concept.</li>
                         <li>Shipped an interactive <strong>Streamlit dashboard</strong> with live-filtered KPIs, a state bubble map, and 39+ automated pytest checks covering the full pipeline.</li>
                     </ul>
                 </a>

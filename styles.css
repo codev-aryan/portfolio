@@ -327,9 +327,9 @@ body {
    of 4 cards doesn't stretch into oversized tiles on wide screens */
 .profiles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--grid-gap);
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
